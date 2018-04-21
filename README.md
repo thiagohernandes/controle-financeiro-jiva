@@ -1,10 +1,12 @@
 # controle-financeiro-jiva (back-end)
 Controle Financeiro Jiva
+
 #Instruções
 
 -- Instruções de Banco de Dados --
 
 -- 1 - Registrar uma conexão no PostgreSQL (versão 10)  com o nome do banco: "jiva-financeiro-db"
+
 -- 2 - Executar o script abaixo da entidade/tabela que armazenará os dados do financeiro (despesas/receitas)
 
 CREATE TABLE public.lancamentos (
@@ -24,6 +26,7 @@ Para os testes do DAO, não é necessário "subir"/executar a aplicação no Tom
 
 -- Mock Teste Controller -- 
 1 - Para os testes do controller, executar a aplicação no Tomcat 8.5 
+
 2 - Executar os testes com o JUnit
 
 Caso não existir os códigos abaixo, inserir para realizar os tesdes do controller
@@ -36,4 +39,10 @@ values(2,'Teste mock','2018-05-02',50.99,'D');
 
 insert into lancamentos (descricao,vencimento,valor,tipo)
 values(3,'Teste mock','2018-05-02',770.10,'D');
+
+-- Deploy
+
+1 git clone 
+
+2 publicar no Tomcat
 
