@@ -1,29 +1,28 @@
 package jiva.com.tdd;
 
-import jiva.com.dao.LancamentoDAO;
-import jiva.com.domain.Lancamento;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.*;
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.when;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InjectMocks;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import jiva.com.dao.LancamentoDAO;
+import jiva.com.domain.Lancamento;
 
 /**
  * DAO Testes
  * @author Thiago Hernandes de Souza
  * @since 20-04-2018
  * */
-
+@RunWith(MockitoJUnitRunner.class)
 public class LancamentoDAOTestes {
-	
-	@InjectMocks
-	private LancamentoDAO lancamentoDAOInjectMocks;
 	
     @Mock
     private LancamentoDAO lancamentoDAOMockService;

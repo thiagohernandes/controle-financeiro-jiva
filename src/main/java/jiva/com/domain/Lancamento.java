@@ -44,6 +44,10 @@ public class Lancamento {
 		this.tipo= tipo;
 	}
 	
+	public Lancamento(Integer id) {
+		this.id = id;
+	}
+	
 	@Id
 	@SequenceGenerator(name="seq-gen",allocationSize=1, sequenceName="lancamentos_id_seq")
 	@GeneratedValue(strategy= GenerationType.SEQUENCE, generator="seq-gen")
