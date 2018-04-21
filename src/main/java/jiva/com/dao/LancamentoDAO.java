@@ -31,7 +31,7 @@ public class LancamentoDAO {
 	@Autowired
     private SessionFactory sessionFactory;
 	
-	private static final long HR24 = 24L * 60L * 60L * 1000L;
+	private static final long HR24Temporal = 24L * 60L * 60L * 1000L;
 
     public SessionFactory getSessionFactory() {
         return sessionFactory;
@@ -74,7 +74,7 @@ public class LancamentoDAO {
     @Transactional
     public Lancamento novoLancamento(Lancamento lancamento) {
     	try {
-    		lancamento.setVencimento(new Date(lancamento.getVencimento().getTime() + HR24));
+    		lancamento.setVencimento(new Date(lancamento.getVencimento().getTime() + HR24Temporal));
             sessionFactory.getCurrentSession().save(lancamento);
             logger.info("Sucesso na criação de novo lançamento financeiro!");
             return lancamento;
@@ -114,7 +114,7 @@ public class LancamentoDAO {
     @Transactional
     public Lancamento alterarLancamento(Lancamento lancamento) {
     	try {
-    		lancamento.setVencimento(new Date(lancamento.getVencimento().getTime() + HR24));
+    		lancamento.setVencimento(new Date(lancamento.getVencimento().getTime() + HR24Temporal));
             sessionFactory.getCurrentSession().update(lancamento);
             logger.info("Sucesso na alteração de lançamento financeiro!");
             return lancamento;
