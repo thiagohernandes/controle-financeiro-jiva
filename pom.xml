@@ -17,6 +17,7 @@
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>
