@@ -5,6 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
+  <!--  Build do projeto -->
 	<build>
         <finalName>controle-financeiro-jiva</finalName>
         <plugins>
@@ -21,6 +22,7 @@
         </plugins>
     </build>
 
+	<!--  Gerenciador de dependências -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -33,6 +35,7 @@
         </dependencies>
     </dependencyManagement>
 
+	<!--  Dependências/bibliotecas -->
     <dependencies>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
@@ -122,14 +125,9 @@
             <artifactId>spring-context</artifactId>
             <version>4.3.10.RELEASE</version>
         </dependency>
-        <dependency>
-		    <groupId>org.hamcrest</groupId>
-		    <artifactId>hamcrest-core</artifactId>
-		    <version>1.3</version>
-		    <scope>test</scope>
-		</dependency>
     </dependencies>
     
+    <!--  Propriedades/conf -->
     <properties>
         <jersey.version>2.25</jersey.version>
         <spring.version>4.3.5.RELEASE</spring.version>
@@ -141,4 +139,5 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    
 </project>
