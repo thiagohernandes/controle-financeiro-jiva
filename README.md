@@ -52,5 +52,5 @@ values(3,'Teste mock','2018-05-02',770.10,'D');
 
 1 git clone https://github.com/thiagohernandes/controle-financeiro-jiva.git
 
-2 publicar no Tomcat utilizando o Eclipse
+2 publicar no Tomcat 8.5 utilizando o Eclipse
 
